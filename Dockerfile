@@ -1,10 +1,9 @@
 FROM continuumio/anaconda3
 
-COPY requirements.txt requirements.txt
+ADD Jupyter-Widget-Interactive-Testing/requirements.txt
 RUN pip install -r requirements.txt
 
-COPY notebooks /home
-WORKDIR /home
+ADD Jupyter-Widget-Interactive-Testing/notebooks/test_render.ipynb
 
 # Exposing ports
 EXPOSE 8888
