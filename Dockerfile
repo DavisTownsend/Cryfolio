@@ -1,6 +1,6 @@
 FROM continuumio/anaconda3
-ADD Jupyter-Widget-Interactive-Testing/requirements.txt
+ADD https://github.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/blob/master/requirements.txt
 RUN pip install -r requirements.txt
-ADD Jupyter-Widget-Interactive-Testing/notebooks/test_render.ipynb
+ADD https://github.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/blob/master/notebooks/test_render.ipynb
 EXPOSE 8888
 CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='demo'"]
