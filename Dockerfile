@@ -4,7 +4,6 @@ ADD Jupyter-Widget-Interactive-Testing/requirements.txt
 RUN pip install -r requirements.txt
 
 ADD Jupyter-Widget-Interactive-Testing/notebooks/test_render.ipynb
-
 # Exposing ports
 EXPOSE 8888
 
