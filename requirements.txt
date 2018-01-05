@@ -1,7 +1,6 @@
-bokeh
-Twisted
-wheel
-
+bokeh == 0.12.13
+wheel == 0.29.0
+Twisted == 17.9.0
 coinmarketcap == 4.1.1
 binance == 0.1
 holoviews == 1.9.2
