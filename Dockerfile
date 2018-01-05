@@ -1,16 +1,15 @@
 FROM continuumio/anaconda3
 ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/requirements.txt /tmp/
 RUN mkdir opt/notebooks
-
+#installs gcc for Twisted which is a dependency of python-binance module
 RUN apt-get update && apt-get install -y gcc unixodbc-dev
 
 #RUN conda install --yes --file /home/requirements.txt
-RUN conda install bokeh
+#install and upgrade pip installer
 RUN conda install pip
 RUN pip install pip --upgrade
+
 #install requirements file
-RUN pip install wheel
-RUN pip install twisted
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
 
