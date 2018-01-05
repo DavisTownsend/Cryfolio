@@ -1,14 +1,15 @@
 FROM continuumio/anaconda3
+ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/requirements.txt /tmp/
+RUN mkdir /notebooks
 
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
+#RUN conda install --yes --file /home/requirements.txt
+RUN conda install bokeh
+RUN conda install pip
+#install requirements file
+RUN pip install --requirement /tmp/requirements.txt
+COPY . /tmp/
 
-COPY notebooks /home
-WORKDIR /home
+ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/notebooks/test_render.ipynb /notebooks
 
-# Exposing ports
-EXPOSE 8888
-
-# Running jupyter notebook
-# --NotebookApp.token ='demo' is the password
-CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='demo'"]
+$EXPOSE 8888
+#CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='demo'"]
