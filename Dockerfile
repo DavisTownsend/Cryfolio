@@ -2,6 +2,9 @@ FROM continuumio/anaconda3
 ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/requirements.txt /tmp/
 RUN mkdir opt/notebooks
 
+RUN apt-get install python3-dev
+RUN apt-get install libevent-dev
+
 #RUN conda install --yes --file /home/requirements.txt
 RUN conda install bokeh
 RUN conda install pip
