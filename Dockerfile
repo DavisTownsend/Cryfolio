@@ -2,14 +2,15 @@ FROM continuumio/anaconda3
 ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/requirements.txt /tmp/
 RUN mkdir opt/notebooks
 
-#RUN sudo apt-get install python-dev
-#RUN sudo apt-get install libevent-dev
+RUN sudo apt-get install python-dev
+RUN sudo apt-get install libevent-dev
 
 #RUN conda install --yes --file /home/requirements.txt
 RUN conda install bokeh
 RUN conda install pip
+RUN pip install pip --upgrade
 #install requirements file
-RUN pip install wheels
+RUN pip install wheel
 RUN pip install twisted
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
