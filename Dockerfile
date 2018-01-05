@@ -6,6 +6,7 @@ RUN mkdir opt/notebooks
 RUN conda install bokeh
 RUN conda install pip
 #install requirements file
+RUN pip install twisted
 RUN pip install --requirement /tmp/requirements.txt
 COPY . /tmp/
 
