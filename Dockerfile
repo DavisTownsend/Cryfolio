@@ -13,3 +13,5 @@ ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-T
 
 #EXPOSE 8888
 #CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='demo'"]
+CMD jupyter notebook --no-browser --ip 0.0.0.0 --port 8888 /notebooks
+
