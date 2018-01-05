@@ -11,5 +11,5 @@ COPY . /tmp/
 
 ADD https://raw.githubusercontent.com/DavisTownsend/Jupyter-Widget-Interactive-Testing/master/notebooks/test_render.ipynb /notebooks
 
-$EXPOSE 8888
+#EXPOSE 8888
 #CMD ["jupyter", "notebook", "--no-browser", "--ip=0.0.0.0", "--allow-root", "--NotebookApp.token='demo'"]
