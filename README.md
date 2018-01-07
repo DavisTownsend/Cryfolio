@@ -98,7 +98,7 @@ go into command prompt inside docker image to see e.g. file directory structure
 you can do all the normal ls and cd commands inside the image (now a container) after running this command
 
 ## Donations
-If this library was useful to you, please consider donating, I accept:
+If this tool was useful to you, please consider donating, I accept:
 * BTC: 1K2F6ujynFEo6PBG9a9H5BcEjgCdyciAND
 * ETH: 0xd5fe398c3f2fb316e4e5c70eafa07020a4fd01c0
 * LTC: LLAz74VtUPJ7u78CPcEwdG9AteURJdnET8
