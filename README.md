@@ -28,6 +28,7 @@ Once Docker is downloaded you should see something like this when you start the 
 ![alt text](http://www.phpbuilder.com/imagesvr_ce/9501/DPfig6.png)
 
 Now run the following command to pull the pre-built image from docker hub (you can also do `docker build https://github.com/DavisTownsend/Cryfolio/blob/master/Dockerfile` to build directly from the repo but this will be slower since the image is not pre-built)
+
 `docker pull dtownsend/cryfolio`
 
 
