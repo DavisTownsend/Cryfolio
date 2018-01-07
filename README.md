@@ -16,5 +16,5 @@ Otherwise, follow these instructions to automatically get a docker container up 
 ### Pre-requisites
 #### Docker
 Before getting started with the automatic set-up, you'll need to download [docker](https://docs.docker.com/engine/installation/)
-[logo]: http://www.phpbuilder.com/imagesvr_ce/9501/DPfig6.png
+![Docker start page]: http://www.phpbuilder.com/imagesvr_ce/9501/DPfig6.png
 #### Binance Account API Key & Secret
