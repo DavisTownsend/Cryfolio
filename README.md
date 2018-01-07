@@ -15,7 +15,7 @@ Otherwise, follow these instructions to automatically get a docker container up 
 
 #### Binance Account API Key & Secret
 You'll also need to create an API key on binance's website under you account page, you can set whatever permissions you feel comfortable with
-![alt text](https://www.medvedtrader.com/Binance/Binance_apimenu.png)
+![alt text](https://s3.amazonaws.com/cdn.freshdesk.com/data/helpdesk/attachments/production/1058347065/original/KrqQo363K-EdEyRDUhtxllwFalvPSAgANg.png?1508949029)
 ##### API permission recommendations for maximum security:
 * restrict access to trusted ip only(in this case you'll just need the ip of your docker container which should be the same as your local ip address.
 * only allow read info permission (can see your account balance and historical trades, deposits, and withdrawals
