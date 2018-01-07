@@ -29,7 +29,9 @@ Once Docker is downloaded you should see something like this when you start the 
 
 Now run the following command to pull the pre-built image from docker hub 
 `docker pull dtownsend/cryfolio`
-(you can also do `docker build https://raw.githubusercontent.com/DavisTownsend/Cryfolio/master/Dockerfile -t <your image name here>:latest` to build directly from the repo but this will be slower since the image is not pre-built. The benefit from building is you can add a custom image name using the -t flag)
+(you can also do 
+`docker build https://raw.githubusercontent.com/DavisTownsend/Cryfolio/master/Dockerfile -t <your image name here>:latest` 
+to build directly from the repo but this will be slower since the image is not pre-built. The benefit from building is you can add a custom image name using the -t flag)
 
 `docker pull dtownsend/cryfolio`
 
