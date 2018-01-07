@@ -6,6 +6,13 @@
 ## Why should I use this?
 The idea behind this is to create a desktop app to help manage your crypto portfolio on your own pc without having to enter your exchange API keys in an online tool that might store those keys.
 
+### Features
+* interactive pie chart of binance portfolio holdings
+* detailed table summary of binance portfolio holdings
+* interactive plotting of coin price and returns
+* Binance deposit, withdrawal, and trade history
+
+
 ## Quickstart
 if you know what you are doing I'd recommend to just download the jupyter notebook, setup your own environment using the requirements.txt file, enter you api key and secret at the top cell and run the rest of the cells from there.
 
@@ -61,6 +68,16 @@ Now everything is ready to go you can click the cell button at the top, and then
 ![alt text](https://github.com/DavisTownsend/Cryfolio/blob/master/images/jupyter_run_all.PNG)
 
 Once the code is done running, you can scroll about half way to the detailed summary of holdings and from there down are the outputs listed in Features.
+
+### Restarting the notebook
+Important Note: When you close out of a session (use control + C in docker to close the notebook session) nothing is saved, so don't make changes to the jupyter notebook expecting them to persist
+
+If you want to re-run the notebook later, as long as you still have to image you just need to re-run the docker run command:
+
+`docker run -i -t -p 8888:8888 <your image name here> /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"`
+
+and do the same steps as before where you copy/paste the url into the browser to run the notebook
+
 
 
 
