@@ -49,11 +49,16 @@ After you run this command you should see a prompt pop up that gives the the url
 (Note: if the URL given doesn't work it means you need to replace localhost with your docker machine ip address which you can find by running : `docker-machine ip` 
 Once you have the address just replace localhost:8888 with <your ip here>:8888 in the URL given)
   
-When you get to the jupyter notebook interface in the browser you should see one notebook already there, open it
+When you get to the jupyter notebook interface in the browser you should see one notebook already there
+![alt text](https://github.com/DavisTownsend/Cryfolio/blob/master/images/jupyter_home_page.PNG)
+
+left click on the notebook to open it
 
 in the very top cell you need to copy paste your API Key and Secret into the correspond spots
+![alt text](https://github.com/DavisTownsend/Cryfolio/blob/master/images/jupyter_API_entry.PNG)
 
 Now everything is ready to go you can click the cell button at the top, and then click Run All to run all the cells in the notebook sequentially.
+![alt text](https://github.com/DavisTownsend/Cryfolio/blob/master/images/jupyter_run_all.PNG)
 
 Once the code is done running, you can scroll about half way to the detailed summary of holdings and from there down are the outputs listed in Features.
 
