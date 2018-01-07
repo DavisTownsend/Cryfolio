@@ -92,7 +92,9 @@ remove all containers:
 `docker rm $(docker ps -aq)`
 
 go into command prompt inside docker image to see e.g. file directory structure
+
 `docker run -it <image_name> sh`
+
 you can do all the normal ls and cd commands inside the image (now a container) after running this command
 
 
