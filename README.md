@@ -24,16 +24,39 @@ Before getting started with the automatic set-up, You'll need to create an API k
 #### Docker
 You'll also need to download [docker](https://docs.docker.com/engine/installation/)
 
+### Step by Step guide
 Once Docker is downloaded you should see something like this when you start the docker app:
 ![alt text](http://www.phpbuilder.com/imagesvr_ce/9501/DPfig6.png)
 
-Now run the following command to pull the pre-built image from docker hub 
-`docker pull dtownsend/cryfolio`
-(you can also do 
+Now run the following command in docker to build the docker image and
+make sure to replace <your image name here> with whatever you want to call your image
+  
 `docker build https://raw.githubusercontent.com/DavisTownsend/Cryfolio/master/Dockerfile -t <your image name here>:latest` 
-to build directly from the repo but this will be slower since the image is not pre-built. The benefit from building is you can add a custom image name using the -t flag)
 
-`docker pull dtownsend/cryfolio`
+Once you have done this you can run
+
+`docker images`
+
+to see your newly built image.
+
+Now we will turn this image into a running container that launches the jupyter notebook application by running this line of code:
+(again make sure to add replace replace <your image name here> with whatever you called your image in the previous step
+
+`docker run -i -t -p 8888:8888 <your image name here> /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"`
+
+After you run this command you should see a prompt pop up that gives the the url for your jupyter notebook, copy and paste the URL into your browser
+
+(Note: if the URL given doesn't work it means you need to replace localhost with your docker machine ip address which you can find by running : `docker-machine ip` 
+Once you have the address just replace localhost:8888 with <your ip here>:8888 in the URL given)
+  
+When you get to the jupyter notebook interface in the browser you should see one notebook already there, open it
+
+in the very top cell you need to copy paste your API Key and Secret into the correspond spots
+
+Now everything is ready to go you can click the cell button at the top, and then click Run All to run all the cells in the notebook sequentially.
+
+Once the code is done running, you can scroll about half way to the detailed summary of holdings and from there down are the outputs listed in Features.
+
 
 
 
