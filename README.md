@@ -47,7 +47,7 @@ Once you have done this you can run
 to see your newly built image.
 
 Now we will turn this image into a running container that launches the jupyter notebook application by running this line of code:
-(again make sure to add replace replace <your image name here> with whatever you called your image in the previous step
+(again make sure to replace <**your image name here**> with whatever you called your image in the previous step
 
 `docker run -i -t -p 8888:8888 <your image name here> /bin/bash -c "/opt/conda/bin/conda install jupyter -y --quiet && /opt/conda/bin/jupyter notebook --notebook-dir=/opt/notebooks --ip='*' --port=8888 --no-browser --allow-root"`
 
