@@ -36,7 +36,7 @@ Once Docker is downloaded you should see something like this when you start the 
 ![alt text](http://www.phpbuilder.com/imagesvr_ce/9501/DPfig6.png)
 
 Now run the following command in docker to build the docker image and
-make sure to replace **<your image name here>** with whatever you want to call your image
+make sure to replace **your image name here** with whatever you want to call your image
   
 `docker build https://raw.githubusercontent.com/DavisTownsend/Cryfolio/master/Dockerfile -t <your image name here>:latest` 
 
