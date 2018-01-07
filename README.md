@@ -78,6 +78,26 @@ If you want to re-run the notebook later, as long as you still have to image you
 
 and do the same steps as before where you copy/paste the url into the browser to run the notebook
 
+### Other useful Docker commands
+list all running containers:
+`docker ps`
+
+list all containers:
+`docker ps -a`
+
+stop all running containers:
+`docker stop $(docker ps -aq)`
+
+remove all containers:
+`docker rm $(docker ps -aq)`
+
+go into command prompt inside docker image to see e.g. file directory structure
+`docker run -it <image_name> sh`
+you can do all the normal ls and cd commands inside the image (now a container) after running this command
+
+
+
+
 
 
 
