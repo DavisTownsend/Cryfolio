@@ -1,6 +1,6 @@
 bokeh == 0.12.13
 wheel == 0.29.0
-Twisted == 19.2.0
+Twisted >= 19.2.0
 coinmarketcap == 4.1.1
 holoviews == 1.9.2
 ipywidgets == 7.0.0
